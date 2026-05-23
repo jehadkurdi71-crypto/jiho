@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihad.IT - Profile</title>
+    <!-- لۆگۆکانی FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ستایلی گشتی و ئەنیمەیشنی باکگراوند */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* دروستکردنی ئەستێرەکان */
+        .stars-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* کارتە سەرەکییەکە */
+        .profile-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px 30px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .profile-card:hover {
+            border: 1px solid #d4af37;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* وێنەی ناو بازنە (لۆگۆی خۆت) */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px #d4af37;
+        }
+
+        .header-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, #ffe066, #f5af19, #e65c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        /* ستایلی لیست و دوگمەکان */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn i {
+            font-size: 1.4rem;
+        }
+
+        /* ڕەنگ و کاریگەری کاتێک مشک دەچێتە سەر دوگمەکان */
+        .social-btn:hover {
+            transform: scale(1.05);
+            background: #d4af37;
+            color: #000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+
+        /* فووتەر */
+        .footer-text {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- کۆنتێنەری ئەستێرەکان -->
+    <div class="stars-container" id="stars"></div>
+
+    <div class="profile-card">
+        <!-- دەتوانی لێرە وێنەی خۆت دابنێیت، ئەگەر نا ئەم لۆگۆیە دەمێنێتەوە -->
+        <img src="https://ui-avatars.com/api/?name=Jihad+IT&background=d4af37&color=fff&size=128" alt="Profile" class="profile-img">
+        
+        <div class="header-title">Jihad.IT</div>
+        <div class="subtitle">IT Specialist & Developer</div>
+        
+        <div class="links-container">
+            <!-- لینکەکانت لێرە چاک کراوە -->
+            <a href="https://snapchat.com/t/kUTflopC" target="_blank" class="social-btn">
+                <span>Snapchat</span>
+                <i class="fab fa-snapchat"></i>
+            </a>
+            
+            <a href="https://www.tiktok.com/@hope_jih4d?_r=1&_t=ZS-96Q71PBtulx" target="_blank" class="social-btn">
+                <span>TikTok</span>
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-btn">
+                <span>Telegram</span>
+                <i class="fab fa-telegram"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-btn">
+                <span>WhatsApp</span>
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="#" target="_blank" class="social-btn">
+                <span>Facebook</span>
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+
+        <div class="footer-text">Developed by Jihad.IT © 2026</div>
+    </div>
+
+    <script>
+        // دروستکردنی ئەستێرەکان بە شێوەیەکی خۆکار
+        const starsContainer = document.getElementById('stars');
+        const starCount = 150;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // قەبارە و شوێنی هەڕەمەکی
+            const size = Math.random() * 3 + 'px';
+            star.style.width = size;
+            star.style.height = size;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            
+            // کاتی ئەنیمەیشنی جیاواز بۆ درەوشانەوە
+            star.style.setProperty('--duration', Math.random() * 3 + 2 + 's');
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
